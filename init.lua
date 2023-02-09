@@ -27,6 +27,9 @@ function leader_keymaps(options)
   end
 end
 
+function toggle(option)
+  vim.o[option] = not vim.o[option]
+end
 -- }}}
 
 -- Source Other Files {{{
@@ -74,9 +77,9 @@ leader_keymaps {
   f = ":NeoTreeFocusToggle<CR>",
   F = ":NeoTreeReveal<CR>",
   r = ":Mru<CR>",
-  n = function() vim.o.number = not vim.o.number end,
-  h = function() vim.o.hlsearch = not vim.o.hlsearch end,
-  w = function() vim.o.wrap = not vim.o.wrap end
+  n = toggle('number'),
+  h = toggle('hlsearch'),
+  w = toggle('wrap')
 }
 -- }}}
 
@@ -89,10 +92,6 @@ require('neo-tree').setup {
 }
 
 require('gitsigns').setup {
-  signs = {
-    add = { text = '|' },
-    change = { text = '|' },
-  },
   signcolumn = true
 }
 
