@@ -11,19 +11,20 @@ vim_commands {
 }
 
 set_options {
-  guifont = "Hack Nerd Font:h15",
-  number = false,
+  termguicolors = true,
+  guifont       = "Hack Nerd Font:h15",
+  number        = false,
 
-  tabstop     = 2,
-  shiftwidth  = 2,
-  smarttab    = true,
-  expandtab   = true,
-  smartindent = true,
+  tabstop       = 2,
+  shiftwidth    = 2,
+  smarttab      = true,
+  expandtab     = true,
+  smartindent   = true,
 
-  ruler       = true,
-  visualbell  = true,
-  showcmd     = true,
-  list        = true,
+  ruler         = true,
+  visualbell    = true,
+  showcmd       = true,
+  list          = true,
 
   swapfile    = false,
   backup      = false,
