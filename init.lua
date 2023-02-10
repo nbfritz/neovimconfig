@@ -1,55 +1,60 @@
 -- NeoVim Configuration
 
+-- Initial Lua Setup {{{
+local config_root = vim.fn.stdpath('config')
+local set = vim.opt
+-- }}}
+
 -- Source Other Files {{{
-vim.cmd("source ~/.config/nvim/lua/util.lua")
-vim.cmd("source ~/.config/nvim/lua/plugins.lua")
+vim.cmd('source '..config_root..'/lua/util.lua')
+vim.cmd('source '..config_root..'/lua/plugins.lua')
 -- }}}
 
 -- Configuration {{{
-vim_commands {
-  colorscheme = "lucius"
-}
+vim.cmd.colorscheme('lucius')
 
-set_options {
-  termguicolors = true,
-  guifont       = "Hack Nerd Font:h15",
-  number        = false,
+vim.opt.termguicolors = true
+vim.opt.number        = false
 
-  tabstop       = 2,
-  shiftwidth    = 2,
-  smarttab      = true,
-  expandtab     = true,
-  smartindent   = true,
+vim.opt.tabstop       = 2
+vim.opt.shiftwidth    = 2
+vim.opt.smarttab      = true
+vim.opt.expandtab     = true
+vim.opt.smartindent   = true
 
-  ruler         = true,
-  visualbell    = true,
-  showcmd       = true,
-  list          = true,
+vim.opt.ruler         = true
+vim.opt.visualbell    = true
+vim.opt.showcmd       = true
+vim.opt.list          = true
 
-  swapfile    = false,
-  backup      = false,
-  splitbelow  = true,
-  splitright  = true,
-  hlsearch    = false,
-  ignorecase  = true,
-  smartcase   = true
-}
+vim.opt.swapfile      = false
+vim.opt.backup        = false
+vim.opt.splitbelow    = true
+vim.opt.splitright    = true
+vim.opt.hlsearch      = false
+vim.opt.ignorecase    = true
+vim.opt.smartcase     = true
+
 
 custom_commands {
-  Settings = 'e ~/.config/nvim/init.lua',
-  SettingsPlugins = 'e ~/.config/nvim/lua/plugins.lua',
-  SettingsReload = 'source ~/.config/nvim/init.lua'
+  Settings = 'e '..config_root..'/init.lua',
+  SettingsPlugins = 'e '..config_root..'/lua/plugins.lua',
+  SettingsReload = 'source '..config_root..'/init.lua'
 }
 -- }}}
 
 -- Keymaps {{{
 leader_keymaps {
-  f = ":NeoTreeFocusToggle<CR>",
-  F = ":NeoTreeReveal<CR>",
-  r = ":Mru<CR>",
+  f = ':NeoTreeFocusToggle<CR>',
+  F = ':NeoTreeReveal<CR>',
+  r = ':Mru<CR>',
   n = toggle('number'),
   h = toggle('hlsearch'),
-  w = toggle('wrap')
+  w = toggle('wrap'),
+  tf = ':Telescope find_files<CR>',
+  tr = ':Telescope registers<CR>',
+  tg = ':Telescope live_grep<CR>',
+  tb = ':Telescope buffers<CR>'
 }
 -- }}}
 
@@ -59,10 +64,6 @@ require('neo-tree').setup {
     position = 'right',
     width = 40
   }
-}
-
-require('gitsigns').setup {
-  signcolumn = true
 }
 
 require('feline').setup()
