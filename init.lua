@@ -51,6 +51,7 @@ leader_keymaps {
   n = toggle('number'),
   h = toggle('hlsearch'),
   w = toggle('wrap'),
+  tt = ':Telescope<CR>',
   tf = ':Telescope find_files<CR>',
   tr = ':Telescope registers<CR>',
   tg = ':Telescope live_grep<CR>',

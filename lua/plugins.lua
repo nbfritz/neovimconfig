@@ -16,7 +16,7 @@ local packer_bootstrap = ensure_packer()
 vim.cmd([[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile | PackerInstall
   augroup end
 ]])
 --- }}}
@@ -25,6 +25,7 @@ vim.cmd([[
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'lvht/mru'
+  use 'm00qek/baleia.nvim'
 
   use {
     'nvim-neo-tree/neo-tree.nvim',
