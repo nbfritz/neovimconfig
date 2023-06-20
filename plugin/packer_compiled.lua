@@ -148,6 +148,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\natha\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["true-zen.nvim"] = {
+    loaded = true,
+    path = "/Users/nathanfritz/.local/share/nvim/site/pack/packer/start/true-zen.nvim",
+    url = "https://github.com/Pocco81/true-zen.nvim"
+  },
+  ["wrapping.nvim"] = {
+    loaded = true,
+    path = "/Users/nathanfritz/.local/share/nvim/site/pack/packer/start/wrapping.nvim",
+    url = "https://github.com/andrewferrier/wrapping.nvim"
   }
 }
 

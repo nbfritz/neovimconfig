@@ -26,6 +26,8 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'lvht/mru'
   use 'm00qek/baleia.nvim'
+  use 'Pocco81/true-zen.nvim'
+  use 'andrewferrier/wrapping.nvim'
 
   use {
     'nvim-neo-tree/neo-tree.nvim',
@@ -52,7 +54,8 @@ return require('packer').startup(function(use)
     run = ':TSUpdate'
   }
 
-  use {
+  
+  use { -- status line
     'feline-nvim/feline.nvim',
     requires = { 'lewis6991/gitsigns.nvim' }
   }
