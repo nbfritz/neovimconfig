@@ -54,7 +54,6 @@ return require('packer').startup(function(use)
     run = ':TSUpdate'
   }
 
-  
   use { -- status line
     'feline-nvim/feline.nvim',
     requires = { 'lewis6991/gitsigns.nvim' }

@@ -47,23 +47,6 @@ custom_commands {
 if vim.g.neovide then
   if vim.fn.has('macunix') then
     vim.g.neovide_input_use_logo = 1 -- enable use of the logo (cmd) key
-    vim.keymap.set('v', '<D-c>', '"+y') -- Copy
-    vim.keymap.set('n', '<D-a>', 'ggVG') -- Select All normal mode
-    vim.keymap.set('n', '<D-v>', '"+P') -- Paste normal mode
-    vim.keymap.set('v', '<D-v>', '"+P') -- Paste visual mode
-    vim.keymap.set('v', '<D-a>', 'ggVG') -- Select All visual mode
-    vim.keymap.set('c', '<D-v>', '<C-R>+') -- Paste command mode
-    vim.keymap.set('i', '<D-v>', '<ESC>l"+Pli') -- Paste insert mode
-    vim.keymap.set('i', '<D-a>', '<ESC>ggVG') -- Select All insert mode
-  else
-    vim.keymap.set('v', '<C-c>', '"+y') -- Copy
-    vim.keymap.set('n', '<C-a>', 'ggVG') -- Select All normal mode
-    vim.keymap.set('n', '<C-v>', '"+P') -- Paste normal mode
-    vim.keymap.set('v', '<C-v>', '"+P') -- Paste visual mode
-    vim.keymap.set('v', '<C-a>', 'ggVG') -- Select All visual mode
-    vim.keymap.set('c', '<C-v>', '<C-R>+') -- Paste command mode
-    vim.keymap.set('i', '<C-v>', '<ESC>l"+Pli') -- Paste insert mode
-    vim.keymap.set('i', '<C-a>', '<ESC>ggVG') -- Select All insert mode
   end
 
   vim.g.neovide_cursor_vfx_mode = "wireframe"
@@ -92,6 +75,27 @@ leader_keymaps {
 -- invert scroll for mac
 vim.keymap.set('n', '<ScrollWheelDown>', '<ScrollWheelUp>', { silent = true })
 vim.keymap.set('n', '<ScrollWheelUp>', '<ScrollWheelDown>', { silent = true })
+
+if vim.fn.has('macunix') then
+  vim.keymap.set('v', '<D-c>', '"+y') -- Copy
+  vim.keymap.set('n', '<D-a>', 'ggVG') -- Select All normal mode
+  vim.keymap.set('n', '<D-v>', '"+P') -- Paste normal mode
+  vim.keymap.set('v', '<D-v>', '"+P') -- Paste visual mode
+  vim.keymap.set('v', '<D-a>', 'ggVG') -- Select All visual mode
+  vim.keymap.set('c', '<D-v>', '<C-R>+') -- Paste command mode
+  vim.keymap.set('i', '<D-v>', '<ESC>l"+Pli') -- Paste insert mode
+  vim.keymap.set('i', '<D-a>', '<ESC>ggVG') -- Select All insert mode
+else
+  vim.keymap.set('v', '<C-c>', '"+y') -- Copy
+  vim.keymap.set('n', '<C-a>', 'ggVG') -- Select All normal mode
+  vim.keymap.set('n', '<C-v>', '"+P') -- Paste normal mode
+  vim.keymap.set('v', '<C-v>', '"+P') -- Paste visual mode
+  vim.keymap.set('v', '<C-a>', 'ggVG') -- Select All visual mode
+  vim.keymap.set('c', '<C-v>', '<C-R>+') -- Paste command mode
+  vim.keymap.set('i', '<C-v>', '<ESC>l"+Pli') -- Paste insert mode
+  vim.keymap.set('i', '<C-a>', '<ESC>ggVG') -- Select All insert mode
+end
+
 -- }}}
 
 -- Plugin Configuration {{{

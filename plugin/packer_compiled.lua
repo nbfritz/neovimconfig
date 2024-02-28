@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "C:\\Users\\natha\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\share\\lua\\5.1\\?.lua;C:\\Users\\natha\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\share\\lua\\5.1\\?\\init.lua;C:\\Users\\natha\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\lib\\luarocks\\rocks-5.1\\?.lua;C:\\Users\\natha\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\lib\\luarocks\\rocks-5.1\\?\\init.lua"
-local install_cpath_pattern = "C:\\Users\\natha\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\lib\\lua\\5.1\\?.so"
+local package_path_str = "/Users/nathanfritz/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/nathanfritz/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/nathanfritz/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/nathanfritz/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/nathanfritz/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -76,77 +76,77 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["baleia.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\natha\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\baleia.nvim",
+    path = "/Users/nathanfritz/.local/share/nvim/site/pack/packer/start/baleia.nvim",
     url = "https://github.com/m00qek/baleia.nvim"
   },
   ["feline.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\natha\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\feline.nvim",
+    path = "/Users/nathanfritz/.local/share/nvim/site/pack/packer/start/feline.nvim",
     url = "https://github.com/feline-nvim/feline.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\natha\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim",
+    path = "/Users/nathanfritz/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   lucius = {
     loaded = true,
-    path = "C:\\Users\\natha\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lucius",
+    path = "/Users/nathanfritz/.local/share/nvim/site/pack/packer/start/lucius",
     url = "https://github.com/jonathanfilip/vim-lucius"
   },
   mru = {
     loaded = true,
-    path = "C:\\Users\\natha\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mru",
+    path = "/Users/nathanfritz/.local/share/nvim/site/pack/packer/start/mru",
     url = "https://github.com/lvht/mru"
   },
   ["neo-tree.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\natha\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neo-tree.nvim",
+    path = "/Users/nathanfritz/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
   },
   ["nui.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\natha\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nui.nvim",
+    path = "/Users/nathanfritz/.local/share/nvim/site/pack/packer/start/nui.nvim",
     url = "https://github.com/MunifTanjim/nui.nvim"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "C:\\Users\\natha\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
+    path = "/Users/nathanfritz/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "C:\\Users\\natha\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
+    path = "/Users/nathanfritz/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["open-browser.vim"] = {
     loaded = true,
-    path = "C:\\Users\\natha\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\open-browser.vim",
+    path = "/Users/nathanfritz/.local/share/nvim/site/pack/packer/start/open-browser.vim",
     url = "https://github.com/tyru/open-browser.vim"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\natha\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
+    path = "/Users/nathanfritz/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plantuml-previewer.vim"] = {
     loaded = true,
-    path = "C:\\Users\\natha\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plantuml-previewer.vim",
+    path = "/Users/nathanfritz/.local/share/nvim/site/pack/packer/start/plantuml-previewer.vim",
     url = "https://github.com/weirongxu/plantuml-previewer.vim"
   },
   ["plantuml-syntax"] = {
     loaded = true,
-    path = "C:\\Users\\natha\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plantuml-syntax",
+    path = "/Users/nathanfritz/.local/share/nvim/site/pack/packer/start/plantuml-syntax",
     url = "https://github.com/aklt/plantuml-syntax"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\natha\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
+    path = "/Users/nathanfritz/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\natha\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
+    path = "/Users/nathanfritz/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["true-zen.nvim"] = {
